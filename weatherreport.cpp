@@ -19,8 +19,8 @@ class IWeatherSensor {
 /// without needing the actual Sensor during development
 
 class SensorStub : public IWeatherSensor {
-    public:
-        SensorStub(){
+ public:
+        SensorStub() {
             // default values
         }
         SensorStub(int humidity, int precipitation, int temperature, int windSpeed)
@@ -43,7 +43,7 @@ class SensorStub : public IWeatherSensor {
             return m_windSpeed;
         }
 
-    private:
+ private:
         int m_humidity = 72;
         int m_precipitation = 70;
         int m_temperature = 26;

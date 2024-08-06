@@ -32,8 +32,7 @@ std::tuple<int, int, int> getCellDetails(std::string row) {
     return cellDetails;
 }
 
-bool alignmentCheck(std::stringstream& colormapOutput)
-{
+bool alignmentCheck(std::stringstream& colormapOutput) {
     std::string str;
     std::tuple<int, int, int> previousCellDetails = std::make_tuple(-1, -1, -1);
     while (std::getline(colormapOutput, str)) {
