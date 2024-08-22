@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <tuple>
+#include <iomanip>
 
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
@@ -9,7 +10,7 @@ int printColorMap() {
     int i = 0, j = 0;
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
-            std::cout << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
+            std::cout << std::setw(5) << i * 5 + j << " | " << std::setw(10) << majorColor[i] << " | " << std::setw(10) << minorColor[i] << "\n";
         }
     }
     return i * j;
